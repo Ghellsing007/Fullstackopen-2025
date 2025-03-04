@@ -78,5 +78,5 @@ npm start
 
 ---
 ### ✨ Contacto
-Si tienes sugerencias o quieres compartir avances, contáctame en **[garvig.vasquez@gmail.com]** 🚀
+Si tienes sugerencias o quieres compartir avances, contáctame en **[garving.vasquez@gmail.com]** 🚀
 
