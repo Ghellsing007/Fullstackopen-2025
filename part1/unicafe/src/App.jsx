@@ -69,7 +69,7 @@ const App = () => {
       {/* Botones con lógica para cambiar el estado */}
       <Button handleClick={() => { setGood(good + 1); setComponenteActual("A"); }} text="Good" />
       <Button handleClick={() => { setNeutral(neutral + 1); setComponenteActual("B"); }} text="Neutral" />
-      <Button handleClick={() => { setBad(bad + 1); setComponenteActual("C"); }} text="Bad" />
+      <Button handleClick={() => { setBad(bad + 1); setComponenteActual("C") }} text="Bad" />
 
       <Statistics />
     </div>
