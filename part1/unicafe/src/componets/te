@@ -1,0 +1,22 @@
+
+    const RenderizarComponente = (a) => {
+      switch (componenteActual) {
+        case "A":
+          return <StatisticLine text="Good" value={good}/>;
+        case "B":
+          return <StatisticLine text="Neutral" value={neutral}/>;
+        case "C":
+          return <StatisticLine text="bad" value={bad}/>;
+        default:
+          return <h2>{" "}</h2>;
+      }
+    }
+
+        //<p>Good: {good}</p>
+        //<p>Neutral: {neutral}</p>
+        //<p>Bad: {bad}</p>
+       //<p>all: {good + neutral + bad}</p>
+        //<p>Average: {(good - bad) / (good + neutral + bad)}</p>
+        //<p>Positive: {(good / (good + neutral + bad)) * 100}%</p>
+  
+
