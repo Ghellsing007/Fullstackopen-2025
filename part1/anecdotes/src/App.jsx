@@ -15,30 +15,30 @@ const App = () => {
   // Estado para la anécdota actual
   const [selected, setSelected] = useState(0);
 
-  // Estado para los votos de cada anécdota (array con 0 en todas)
+  
   const [votes, setVotes] = useState(new Array(anecdotes.length).fill(0));
 
-  // Función para incrementar el voto de la anécdota actual
+  
   const voteAnecdote = () => {
-    const newVotes = [...votes]; // Copiamos el array actual
-    newVotes[selected] += 1; // Aumentamos en 1 el voto de la anécdota actual
-    setVotes(newVotes); // Actualizamos el estado con el nuevo array
+    const newVotes = [...votes]; 
+    newVotes[selected] += 1; 
+    setVotes(newVotes);
   };
 
-  // Función para seleccionar una nueva anécdota aleatoria
+  
   const nextAnecdote = () => {
     const randomIndex = Math.floor(Math.random() * anecdotes.length);
     setSelected(randomIndex);
   };
 
-  // Función para encontrar la anécdota con más votos
+  
   const mostVotedIndex = votes.indexOf(Math.max(...votes));
 
   return (
     <div>
       <h1>Anecdote of the Day</h1>
       <p>{anecdotes[selected]}</p>
-      <p>Votes: {votes[selected]}<button onClick={voteAnecdote}>Vote</button></p>
+      <p>Votes:{votes[selected]}{"    "}<button onClick={voteAnecdote}>Vote</button></p>
 
       
       <button onClick={nextAnecdote}>Next Anecdote</button>
@@ -57,3 +57,5 @@ const App = () => {
 };
 
 export default App;
+
+
