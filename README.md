@@ -3,12 +3,15 @@
 Este repositorio contiene mi progreso y proyectos realizados durante el curso **FullStackOpen 2025**, ofrecido por la Universidad de Helsinki. Este curso cubre tecnologías modernas de desarrollo web, incluyendo **React, Node.js, Express, MongoDB** y más.
 
 ## 📌 Contenido
-- [Descripción](#descripción)
-- [Requisitos](#requisitos)
-- [Estructura del repositorio](#estructura-del-repositorio)
-- [Instalación y ejecución](#instalación-y-ejecución)
-- [Progreso](#progreso)
-- [Recursos adicionales](#recursos-adicionales)
+- [FullStackOpen 2025](#fullstackopen-2025)
+  - [📌 Contenido](#-contenido)
+  - [Descripción](#descripción)
+  - [Requisitos](#requisitos)
+  - [Estructura del repositorio](#estructura-del-repositorio)
+  - [Instalación y ejecución](#instalación-y-ejecución)
+  - [Progreso](#progreso)
+  - [Recursos adicionales](#recursos-adicionales)
+    - [✨ Contacto](#-contacto)
 
 ## Descripción
 **FullStackOpen** es un curso intensivo que enseña el desarrollo web moderno con un enfoque en el stack de **JavaScript/TypeScript**. Durante el curso, se desarrollan aplicaciones completas con **frontend y backend**, aplicando las mejores prácticas de desarrollo.
@@ -39,6 +42,7 @@ Herramientas necesarias:
  ├── 📁 parte8  # GraphQL
  ├── 📁 parte9  # TypeScript
  ├── 📁 proyectos  # Aplicaciones desarrolladas
+ ├── 📁 extras  # Aplicaciones de ejemplos por el curso.
  └── README.md  # Este archivo
 ```
 
@@ -68,6 +72,8 @@ npm start
 ⬜ **Parte 7** - Backend avanzado y despliegue  
 ⬜ **Parte 8** - Uso de GraphQL  
 ⬜ **Parte 9** - TypeScript en Full Stack  
+⬜ **Extras** - Aplicaciones de ejemplo.  
+
 
 ## Recursos adicionales
 - 📖 [FullStackOpen 2025](https://fullstackopen.com/en/)
