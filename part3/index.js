@@ -1,12 +1,13 @@
 import express from "express";
 import morgan from "morgan";
+import cors from "cors";
 
 
 const app = express();
 
 app.use(express.json());
 app.use(morgan(':method :url :status :res[content-length] - :response-time ms :body'));
-
+app.use(cors())
 
 let persons = [
     {
@@ -61,14 +62,12 @@ app.get('/api/persons/:id', (request, response) => {
 app.post('/api/persons', (request, response) => {
     const body = request.body;
 
-    // Verifica si falta el nombre o el número
     if (!body.name || !body.number) {
         return response.status(400).json({
             error: 'falta el nombre o el número'
         });
     }
 
-    // Verifica si el nombre ya existe en la agenda
     const nameExists = persons.some(person => person.name === body.name);
     if (nameExists) {
         return response.status(400).json({
@@ -76,7 +75,6 @@ app.post('/api/persons', (request, response) => {
         });
     }
 
-    // Si todas las verificaciones pasan, crea la nueva persona
     const person = {
         name: body.name,
         number: body.number,
@@ -84,7 +82,7 @@ app.post('/api/persons', (request, response) => {
     };
 
     persons = persons.concat(person);
-    
+
 
     response.json(person);
 });
@@ -95,7 +93,7 @@ app.delete('/api/persons/:id', (request, response) => {
     response.status(204).end();
 });
 
-const PORT = 3001;
+const PORT = process.env.PORT || 3001
 app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
-});
+    console.log(`Server running on port ${PORT}`)
+})
