@@ -1,5 +1,4 @@
 import axios from 'axios'
-import axios from 'axios'
 const baseUrl = '/api/notes'
 
 const getAll = () => {

@@ -2,7 +2,7 @@
   "name": "part3",
   "version": "1.0.0",
   "main": "index.js",
-  "type": "module",
+  
   "scripts": {
     "start": "node index.js",
     "dev": "nodemon index.js",
@@ -14,7 +14,9 @@
   "description": "",
   "dependencies": {
     "cors": "^2.8.5",
-    "express": "^4.21.2"
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
   },
   "devDependencies": {
     "nodemon": "^3.1.9"
