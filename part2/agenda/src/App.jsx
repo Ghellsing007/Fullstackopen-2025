@@ -54,7 +54,7 @@ const App = () => {
       if (existingPerson) {
           if (window.confirm(`${newName} ya está en la agenda. ¿Deseas actualizar el número?`)) {
               const updatedPerson = { ...existingPerson, number: newNumber };
-              
+  
               personServices
                   .update(existingPerson.id, updatedPerson)
                   .then((returnedPerson) => {
@@ -92,8 +92,14 @@ const App = () => {
               setMessage(`El contacto de '${newName}' fue agregado correctamente.`, 'success');
           })
           .catch((error) => {
-              setMessage(`Error al agregar el contacto de '${newName}' al servidor.`, 'error');
-              console.error(error);
+              console.error(error); 
+  
+              // ✅ Verifica si el error proviene del backend y tiene un mensaje
+              if (error.response && error.response.data && error.response.data.error) {
+                  setMessage(error.response.data.error, 'error');
+              } else {
+                  setMessage(`Error al agregar el contacto de '${newName}' al servidor.`, 'error');
+              }
           });
   };
   
@@ -104,7 +110,7 @@ const App = () => {
           setTimeout(() => setSuccessfulMessage(null), 5000);
       } else {
           setErrorMessage(message);
-          setTimeout(() => setErrorMessage(null), 5000);
+          setTimeout(() => setErrorMessage(null), 8000);
       }
   };
   
